@@ -1,15 +1,15 @@
-import CertificateSection from "./certificate";
-import Project from "./project";
-import ClientReviewsSection from "./review";
-import MyServicesWithPricingSection from "./service";
-import Skills from "./skills";
-import TrustedBySection from "./trustbadges";
-import About from "./about";
-import Navbar from "./navbar";
-import Hero from "./hero";
-import Footer from "./footer";
-import Contact from "./contact";
-import VideoSlider from "./slider";
+import CertificateSection from "./component/certificate";
+import Project from "./component/project";
+import ClientReviewsSection from "./component/review";
+import MyServicesWithPricingSection from "./component/service";
+import Skills from "./component/skills";
+import TrustedBySection from "./component/trustbadges";
+import About from "./component/about";
+import Navbar from "./component/navbar";
+import Hero from "./component/hero";
+import Footer from "./component/footer";
+import Contact from "./component/contact";
+import VideoSlider from "./component/slider";
 
 export default function HomePage() {
   return(
