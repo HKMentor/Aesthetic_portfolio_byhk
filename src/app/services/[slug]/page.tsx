@@ -16,14 +16,78 @@ type Service = {
 
 // ✅ Static data
 const serviceDetails: Record<string, Service> = {
-  // ... same as before
+  "website-development": {
+    title: "Website Design & Development",
+    basic: {
+      price: "Rs. 8,000",
+      duration: "5 days",
+      includes: [
+        "1 Landing Page",
+        "Responsive Design",
+        "Contact Form Integration",
+        "Hosting Guidance",
+      ],
+    },
+    advanced: {
+      price: "Rs. 15,000+",
+      duration: "7-10 days",
+      includes: [
+        "Multi-Page Website",
+        "SEO Optimization",
+        "Admin Dashboard",
+        "Next.js & Tailwind Setup",
+      ],
+    },
+  },
+  "resume-writing": {
+    title: "Professional Resume Writing",
+    basic: {
+      price: "Rs. 1,500",
+      duration: "2 days",
+      includes: [
+        "1-page Resume",
+        "ATS Optimization",
+        "Editable File",
+      ],
+    },
+    advanced: {
+      price: "Rs. 2,500",
+      duration: "3 days",
+      includes: [
+        "2-page Resume + Cover Letter",
+        "Design Layout",
+        "Editable + PDF File",
+      ],
+    },
+  },
+  "canva-design": {
+    title: "Canva Pro Design Services",
+    basic: {
+      price: "Rs. 500",
+      duration: "1 day",
+      includes: [
+        "1 Thumbnail / Post",
+        "Basic Revisions",
+        "HD Quality Export",
+      ],
+    },
+    advanced: {
+      price: "Rs. 2,000",
+      duration: "2-3 days",
+      includes: [
+        "Up to 5 Designs",
+        "Custom Dimensions",
+        "Full Rights + Source File",
+      ],
+    },
+  },
 };
 
 type Props = {
   params: { slug: string };
 };
 
-// ✅ Metadata function
+// ✅ Metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = serviceDetails[params.slug];
   return {
@@ -72,5 +136,6 @@ export default function ServiceDetailPage({ params }: Props) {
     </div>
   );
 }
+
 
 
